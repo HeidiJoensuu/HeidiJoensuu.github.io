@@ -21,12 +21,10 @@ export const newLoan = (balance) => {
  * @param {Object} selected Selected option
  */
 export const useMoney = (balance, selected) => {
-    try {
-        //This modification so that prices would sound more realistic in euros.
-        const euroPrice = selected.price/10    
-        if (balance.getBalance() < euroPrice) alert("Not enough money")
+    try {  
+        if (balance.getBalance() < selected.price) alert("Not enough money")
         else {
-            balance.useMoney(euroPrice)
+            balance.useMoney(selected.price)
             alert(`You now own computer: ${selected.title}`)
         }
     } catch (error) {

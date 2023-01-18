@@ -6,7 +6,7 @@ class Pay {
     }
 
     printPay() {
-        return `${this.#pay}€`
+        return `${this.#pay} NOK`
     }
     getPay(){
         return this.#pay

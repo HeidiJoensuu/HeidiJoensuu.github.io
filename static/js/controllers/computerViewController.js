@@ -19,10 +19,8 @@ export const imageView = (selected) => {
  */
 export const computerView = (selected) => {
     try {
-        //This modification so that prices would sound more realistic in euros.
-        const euroPrice = selected.price/10    
         document.getElementById("info").innerHTML = `<h4>${selected.title}</h4><p>${selected.description}</p>`
-        document.getElementById("price").innerText = `${euroPrice}€`
+        document.getElementById("price").innerText = `${selected.price} NOK`
     } catch (error) {
         console.log(error);
     }

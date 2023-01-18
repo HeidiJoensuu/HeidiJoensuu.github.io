@@ -4,7 +4,7 @@ class Loan {
     }
 
     printLoan() {
-        return `${this.loan}€`
+        return `${this.loan} NOK`
     }
     
     getLoan() {

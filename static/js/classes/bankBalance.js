@@ -15,7 +15,7 @@ class BankBalance extends Loan {
     }
 
     printBalance() {
-        return `${this.#balance+this.loan}€`
+        return `${this.#balance+this.loan} NOK`
     }
     
     getBalance() {
