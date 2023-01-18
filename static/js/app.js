@@ -7,11 +7,11 @@ import { computerList, features } from "./controllers/computersListController.js
 import { computerView, imageView } from "./controllers/computerViewController.js"
 
 const app = async () => {
-    const balance = new BankBalance("Joe Banker", 0, 100)
-    const pay = new Pay(400)
+    const balance = new BankBalance("Joe Banker", 0, 0)
+    const pay = new Pay(0)
     const data = await fetchData()
 
-    //
+    //Getting all elements
     const elGetLoanButton = document.getElementById("btn-get-loan")
     const elWorkButton = document.getElementById("btn-work")
     const elBankButton = document.getElementById("btn-bank")
@@ -19,7 +19,7 @@ const app = async () => {
     const elSelection = document.getElementById("selection")
     const elBuyButton = document.getElementById("buy-now")
 
-    //
+    //function that rerenders all numbers and repay-loan button
     const setNumbers = () => {
         document.getElementById("bank-money").innerHTML = balance.printBalance()
         document.getElementById("loan-money").innerHTML = balance.printLoan()
@@ -27,14 +27,14 @@ const app = async () => {
         if (balance.getLoan() != 0) document.getElementById("btn-repay-loan").style.visibility = 'visible'
         else document.getElementById("btn-repay-loan").style.visibility = 'hidden'
     }
-    //
+    //In first render setting all changing variables to default
     setNumbers()
     computerList(elSelection, data)
     features(data[(elSelection.value-1)])
     imageView(data[(elSelection.value-1)])
     computerView(data[(elSelection.value-1)])
 
-    //Getting loan button
+    //Loan button
     elGetLoanButton.addEventListener('click', () => {
         newLoan(balance)
         setNumbers()
@@ -44,9 +44,8 @@ const app = async () => {
     elWorkButton.addEventListener('click', () => {
         work(pay)
         setNumbers()
-        console.log(elSelection, elSelection.selectedIndex+1)
-        console.log(elSelection.value);
     })
+
     //Bank button
     elBankButton.addEventListener('click', () => {
         bank(pay, balance)
@@ -59,7 +58,7 @@ const app = async () => {
         setNumbers()
     })
     
-    //
+    //Computer selection
     elSelection.addEventListener("change", () => {
         const selected = data[(elSelection.value-1)]
         features(selected)
@@ -67,7 +66,7 @@ const app = async () => {
         imageView(selected)
     })
 
-    //
+    //Buy button
     elBuyButton.addEventListener("click", () => {
         useMoney(balance,data[(elSelection.value-1)])
         setNumbers()

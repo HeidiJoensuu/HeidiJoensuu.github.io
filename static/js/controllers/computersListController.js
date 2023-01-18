@@ -1,5 +1,7 @@
 /**
- * 
+ * This function creates options into computer selection
+ * @param {Object} elSelection Selection element
+ * @param {Array<Object>} data Array of data of computers
  */
 export const computerList = async (elSelection, data) => {
     try {
@@ -17,8 +19,8 @@ export const computerList = async (elSelection, data) => {
 }
 
 /**
- * 
- * @param {*} selected 
+ * This function lists specs of the selected option of computer
+ * @param {Object} selected Selected option
  */
 export const features = (selected) => {
     try {
