@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.headline {
+    margin-top: 16px;
+    margin-bottom: 0px;
+}
+
+.mainPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    background-color: antiquewhite;
+}
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content2 {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.smallDiv {
+    height: 100%;
+    width: 30%;
+    background-color: aqua;
+    min-height: 50px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content3 {
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.laptopSelection {
+    width: 30%;
+    height: 100%;
+    background-color: chocolate;
+    min-height: 50px;
+    min-width: 200px;
+}
+
+.selectedLaptop {
+    width: 70%;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+.inline {
+    display: flex;
+    justify-content: space-between;
+}
+.image {
+    width:100px;
+    height: 100px
+}
