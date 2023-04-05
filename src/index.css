@@ -1,0 +1,115 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+  overflow:hidden;
+}
+
+#root {
+height: 100%;
+}
+
+.fullheigth {
+  height: 100%;
+}
+
+.inProgress {
+  position: absolute;
+  z-index: 5;
+  animation-name: inpro;
+  animation-duration: 2s;
+  transform: rotate(20deg);
+  padding-left: 18%;
+  animation-timing-function: ease-in;
+  height: 300px;
+}
+@keyframes inpro {
+  from {
+    display: none;
+    height: 1000px;
+    transform: rotate(0deg);
+    padding-left: 18%;
+  }
+  to {
+    height: 300px;
+    transform: rotate(20deg);
+    padding-left: 18%;
+  }
+}
+
+.mainPage {
+  position: static;
+  padding-right: 6%;
+  padding-top: 4%;
+  padding-left: 6%;
+  padding-bottom: 4%;
+  height: 100%;
+  box-shadow: inset 0px 0px 50px 20px #dfdfdf;
+}
+
+
+.context{
+  
+  background-color: #f9f4e7;
+  height: 100%;
+  position:static;
+  box-shadow: 0px 0px 10px 10px #f9f4e7;
+}
+
+.sidebar {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 150px;
+}
+
+.vl {
+  border-left: 5px solid rgb(210, 204, 188);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  filter: blur(4px);
+}
+.vl2 {
+  border-left: 1px solid rgb(255, 255, 255);
+  margin-top: 47px;
+  margin-bottom: 47px;
+  right: 3px;
+  position: relative;
+  filter: blur(1px);
+}
+
+#dropdown-basic-button {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding-right: 12px;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.dropdown-toggle::after{
+  display: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+.languageSelect {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    padding-right: 4%;
+    padding-top: 2%;
+    right: 0px
+}
+.languageSelect select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Safari, Chrome, Opera */
+  -webkit-appearance: none;
+}
+
+.languageSelect select::-ms-expand {
+  display: none;
+}
